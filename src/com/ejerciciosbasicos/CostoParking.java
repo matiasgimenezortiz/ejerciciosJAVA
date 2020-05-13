@@ -1,4 +1,4 @@
-package com.ejerciciosintermedios;
+package com.ejerciciosbasicos;
 
 import javax.swing.*;
 
