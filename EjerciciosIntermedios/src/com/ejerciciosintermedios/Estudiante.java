@@ -9,33 +9,33 @@ public class Estudiante {
     private int edad;
     private boolean aprobado;
 
-    public Estudiante(String nombre,int edad, boolean aprobado){
+    public Estudiante(String nombre, int edad, boolean aprobado) {
         ponerNombre(nombre);
         ponerEdad(edad);
         ponerAprobado(aprobado);
     }
 
-    public void ponerNombre (String nombre){
-        this.nombre=nombre;
+    public void ponerNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void ponerEdad (int edad){
-        this.edad=edad;
+    public void ponerEdad(int edad) {
+        this.edad = edad;
     }
 
-    public void ponerAprobado (boolean aprobado){
-        this.aprobado=aprobado;
+    public void ponerAprobado(boolean aprobado) {
+        this.aprobado = aprobado;
     }
 
-    public String preguntarNombre(){
+    public String preguntarNombre() {
         return nombre;
     }
 
-    public int preguntarEdad(){
+    public int preguntarEdad() {
         return edad;
     }
 
-    public boolean preguntarAprobado(){
+    public boolean preguntarAprobado() {
         return aprobado;
     }
 }
