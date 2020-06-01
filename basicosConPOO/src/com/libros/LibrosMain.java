@@ -5,8 +5,8 @@ public class LibrosMain {
         Libro libro1=new Libro(3456789,"Principios de Java","Pedro Gomez",456);
         Libro libro2=new Libro(582347802,"Programacion avanzada","Patricia Perez",455);
 
-        System.out.println(libro1.toString());
-        System.out.println(libro2.toString());
+        System.out.println(libro1);
+        System.out.println(libro2);
 
         System.out.println();
 

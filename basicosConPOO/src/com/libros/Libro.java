@@ -45,9 +45,9 @@ public class Libro {
     }
 
     public String toString(){
-        return "El nombre del libro es: "+getNombreLibro()
-                +" del autor: "+getAutor()
-                +" con ISBN: "+getIsbn()
-                +" y tiene "+ getCantPaginas()+" paginas.";
+        return "El nombre del libro es: \""+getNombreLibro()
+                +"\", del autor: "+getAutor()
+                +", con ISBN: "+getIsbn()
+                +", y tiene "+ getCantPaginas()+" paginas.";
     }
 }
