@@ -1,4 +1,4 @@
-package com.sttrings;
+package com.strings;
 
 import java.util.Arrays;
 import java.util.Scanner;
