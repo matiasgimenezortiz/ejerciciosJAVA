@@ -3,15 +3,15 @@ package com.cine;
 public class Espectador {
     private String nombre;
     private int edad;
-    private double  dinero;
+    private double dinero;
 
-    public Espectador(String nombre, int edad, double dinero) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.dinero = dinero;
-    }
+   public Espectador(String nombre, int edad, double dinero) {
+       this.nombre = nombre;
+       this.edad = edad;
+       this.dinero = dinero;
+   }
 
-    public String getNombre() {
+    public String getNombre(){
         return nombre;
     }
 
@@ -35,12 +35,12 @@ public class Espectador {
         this.dinero = dinero;
     }
 
-    public boolean tieneEdadMinima(Pelicula pelicula){
-        return getEdad()>=pelicula.getEdadMinima();
+    public boolean tieneEdadMinima(Pelicula pelicula) {
+        return getEdad() >= pelicula.getEdadMinima();
     }
 
-    public boolean tieneDinero(Sala sala){
-        return getDinero()>=sala.getPrecio();
+    public boolean tieneDinero(Sala sala) {
+        return getDinero() >= sala.getPrecio();
     }
 
 }

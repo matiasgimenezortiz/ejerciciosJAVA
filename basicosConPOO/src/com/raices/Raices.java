@@ -37,14 +37,14 @@ public class Raices {
     }
 
     public void calcularRaices() {
-        if (getDiscriminante()>=0) {
+        if (getDiscriminante() >= 0) {
             raizUno = obtenerRaizUno();
-            if (getDiscriminante()>0) {
+            if (getDiscriminante() > 0) {
                 raizDos = obtenerRaizDos();
                 System.out.println("La ecuación tiene dos raices:");
                 System.out.println("Las raices son: " + raizUno + " y " + raizDos);
 
-            }else{
+            } else {
                 System.out.println("La ecuación tiene solo una raiz:");
                 System.out.println("La raiz es: " + raizUno);
             }

@@ -1,44 +1,44 @@
 package com.apuestas;
 
-public class Apuesta implements Constantes{
+public class Apuesta implements Constantes {
     private double apuestaTotal;
 
-    public Apuesta(){
-        apuestaTotal=0;
+    public Apuesta() {
+        apuestaTotal = 0;
     }
 
-    public void aumentarApuestaTotal(double dinero){
-        apuestaTotal+=dinero;
+    public void aumentarApuestaTotal(double dinero) {
+        apuestaTotal += dinero;
     }
 
-    public void vaciarApuestaTotal(){
-        apuestaTotal=0;
+    public void vaciarApuestaTotal() {
+        apuestaTotal = 0;
     }
 
-    public void fechas(){
+    public void fechas() {
 
-        Partido resultados=new Partido();
+        Partido resultados = new Partido();
         String partidos[];
 
-        for(int i=0;i<NUMERO_FECHAS;i++){
+        for (int i = 0; i < NUMERO_FECHAS; i++) {
             //APUESTA
-            for(int j=0;j<JUGADORES.length;j++){
-                if(JUGADORES[j].puedeApostar()){
+            for (int j = 0; j < JUGADORES.length; j++) {
+                if (JUGADORES[j].puedeApostar()) {
                     JUGADORES[j].pagarApuesta();
                     JUGADORES[j].generarResultados();
                     aumentarApuestaTotal(DINERO_CADA_FECHA);
-                }else{
+                } else {
                     JUGADORES[j].reiniciarResultados();
                 }
             }
             //PARTIDO
             resultados.generarResultados();
-            partidos=resultados.getPartidos();
+            partidos = resultados.getPartidos();
 
 
             //COMPROBACION
-            for(int j=0;j<JUGADORES.length;j++){
-                if(JUGADORES[j].haAcertadoApuesta(partidos)){
+            for (int j = 0; j < JUGADORES.length; j++) {
+                if (JUGADORES[j].haAcertadoApuesta(partidos)) {
                     JUGADORES[j].ganaApuesta(apuestaTotal);
                     vaciarApuestaTotal();
                 }
@@ -52,17 +52,16 @@ public class Apuesta implements Constantes{
             System.out.println("");
         }
 
-        for(int i=0;i<JUGADORES.length;i++){
+        for (int i = 0; i < JUGADORES.length; i++) {
             System.out.println(JUGADORES[i]);
         }
 
     }
 
 
-
     @Override
     public String toString() {
-        return "En la apuesta total hay: $" +apuestaTotal+" pesitos argentinos!";
+        return "En la apuesta total hay: $" + apuestaTotal + " pesitos argentinos!";
     }
 
 

@@ -3,25 +3,24 @@ package com.curso;
 import java.util.Random;
 
 public abstract class Persona {
+    private final String[] NOMBRES_VAGOS = {"Juan", "Pedro", "Gilberto", "Andres", "Marcos", "Pepe", "Carlos", "Gustavo"};
+    private final String[] NOMBRES_CHICAS = {"Lucrecia", "Lucia", "Julia", "Ana", "Carolina", "Lorena", "Ayelen", "Giuliana"};
+    private final String[] APELLIDOS = {"Lopez", "Gimenez", "Perez", "Benitez", "Loch", "Villalba", "Araujo"};
+    private final char[] SEXO = {'M', 'F'};
     private int edad;
     private String nombre;
     private String apellido;
     private char sexo;
     private boolean presente;
 
-    private final String[] NOMBRES_VAGOS = {"Juan","Pedro","Gilberto","Andres","Marcos","Pepe","Carlos","Gustavo"};
-    private final String[] NOMBRES_CHICAS = {"Lucrecia","Lucia","Julia","Ana","Carolina","Lorena","Ayelen", "Giuliana"};
-    private final String[] APELLIDOS = {"Lopez","Gimenez","Perez","Benitez","Loch","Villalba","Araujo"};
-    private  final char[] SEXO = {'M','F'};
-
-    public Persona(){
+    public Persona() {
         Random aleatorio = new Random();
         apellido = APELLIDOS[aleatorio.nextInt(7)];
         sexo = SEXO[aleatorio.nextInt(2)];
-        if (sexo =='M'){
-            nombre=NOMBRES_VAGOS[aleatorio.nextInt(8)];
-        }else{
-            nombre=NOMBRES_CHICAS[aleatorio.nextInt(8)];
+        if (sexo == 'M') {
+            nombre = NOMBRES_VAGOS[aleatorio.nextInt(8)];
+        } else {
+            nombre = NOMBRES_CHICAS[aleatorio.nextInt(8)];
         }
     }
 
@@ -39,16 +38,16 @@ public abstract class Persona {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public boolean isPresente() {
         return presente;
     }
 
     public void setPresente(boolean presente) {
         this.presente = presente;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getApellido() {

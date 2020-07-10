@@ -5,7 +5,7 @@ public class Butaca {
     private int fila;
     private Espectador espectador;
 
-    public Butaca( int fila,char columna) {
+    public Butaca(int fila, char columna) {
         this.columna = columna;
         this.fila = fila;
         this.espectador = null;
@@ -35,7 +35,7 @@ public class Butaca {
         this.espectador = espectador;
     }
 
-    public boolean isOcupado(){
-        return espectador!=null;
+    public boolean isOcupado() {
+        return espectador != null;
     }
 }

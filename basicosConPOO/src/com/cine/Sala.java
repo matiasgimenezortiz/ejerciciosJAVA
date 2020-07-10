@@ -1,15 +1,15 @@
 package com.cine;
 
-public class Sala{
+public class Sala {
     private Butaca[][] butacas;
     private double precio;
     private Pelicula pelicula;
 
-    public Sala(int filas, int columnas, double precio, Pelicula pelicula){
-       butacas=new Butaca[filas][columnas];
-       this.precio=precio;
-       this.pelicula= pelicula;
-       rellenarButacas();
+    public Sala(int filas, int columnas, double precio, Pelicula pelicula) {
+        butacas = new Butaca[filas][columnas];
+        this.precio = precio;
+        this.pelicula = pelicula;
+        rellenarButacas();
     }
 
     public Butaca[][] getButacas() {
@@ -20,8 +20,8 @@ public class Sala{
         this.butacas = butacas;
     }
 
-    public void setButaca(Butaca butaca){
-        butacas[butacas.length-butaca.getFila()][butaca.getColumna()-'A']=butaca;
+    public void setButaca(Butaca butaca) {
+        butacas[butacas.length - butaca.getFila()][butaca.getColumna() - 'A'] = butaca;
     }
 
     public double getPrecio() {
@@ -40,44 +40,44 @@ public class Sala{
         this.pelicula = pelicula;
     }
 
-    private void rellenarButacas(){
+    private void rellenarButacas() {
         int fila = butacas.length;
 
-        for(int i=0;i<butacas.length;i++){
-            for(int j=0; j<butacas[i].length;j++){
-                butacas[i][j]=new Butaca(fila,(char)('A'+j));
+        for (int i = 0; i < butacas.length; i++) {
+            for (int j = 0; j < butacas[i].length; j++) {
+                butacas[i][j] = new Butaca(fila, (char) ('A' + j));
             }
             fila--;
         }
     }
 
-    public boolean existeButacaLibre(){
-        boolean hayUnaLibre=false;
-        for (int i=0; i<butacas.length;i++){
-            for (int j=0;j<butacas[i].length;j++){
-                if (!butacas[i][j].isOcupado()){
-                    hayUnaLibre=true;
+    public boolean existeButacaLibre() {
+        boolean hayUnaLibre = false;
+        for (int i = 0; i < butacas.length; i++) {
+            for (int j = 0; j < butacas[i].length; j++) {
+                if (!butacas[i][j].isOcupado()) {
+                    hayUnaLibre = true;
                     break;
                 }
             }
         }
-        return  hayUnaLibre;
+        return hayUnaLibre;
     }
 
-    public void mostrarButacas(){
+    public void mostrarButacas() {
         System.out.println("Butacas libres son mostradas con letra L. Butacas ocupadas con letra O:");
         System.out.print("  | ");
-        for (int tituloColumnas=0;tituloColumnas<butacas.length;tituloColumnas++){
-            System.out.print((char)('A'+tituloColumnas)+" | ");
+        for (int tituloColumnas = 0; tituloColumnas < butacas.length; tituloColumnas++) {
+            System.out.print((char) ('A' + tituloColumnas) + " | ");
         }
 
         System.out.println();
-        for (int i=0; i<butacas.length;i++){
-            System.out.print(butacas.length-i+" | ");
-            for (int j=0;j<butacas[i].length;j++){
-                if (butacas[i][j].isOcupado()){
+        for (int i = 0; i < butacas.length; i++) {
+            System.out.print(butacas.length - i + " | ");
+            for (int j = 0; j < butacas[i].length; j++) {
+                if (butacas[i][j].isOcupado()) {
                     System.out.print("O | ");
-                }else{
+                } else {
                     System.out.print("L | ");
                 }
             }
@@ -85,7 +85,7 @@ public class Sala{
         }
     }
 
-    public boolean isButacaLibre(int fila, char columna){
-        return !butacas[butacas.length-fila][columna-'A'].isOcupado();
+    public boolean isButacaLibre(int fila, char columna) {
+        return !butacas[butacas.length - fila][columna - 'A'].isOcupado();
     }
 }

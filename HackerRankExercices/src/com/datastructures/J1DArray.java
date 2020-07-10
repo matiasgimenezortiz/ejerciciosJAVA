@@ -1,4 +1,4 @@
-package com.arrayss;
+package com.datastructures;
 /*
 The code in your editor does the following:
 

@@ -1,4 +1,4 @@
-package com.arrayss;
+package com.datastructures;
 /*
 We define the following:
 A subarray of an -element array is an array composed from a contiguous block of the original array's elements.

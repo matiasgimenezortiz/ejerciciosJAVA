@@ -2,14 +2,14 @@ package com.curso;
 
 import java.util.Random;
 
-public class Alumno extends Persona{
+public class Alumno extends Persona {
+    Random aleatorio = new Random();
     private float calificacion;
-    Random aleatorio=new Random();
 
-    public Alumno(){
+    public Alumno() {
         super();
-        super.setEdad(aleatorio.nextInt(12)+6);//Edad mínima 6 años
-        calificacion=aleatorio.nextInt(9)+1;
+        super.setEdad(aleatorio.nextInt(12) + 6);//Edad mínima 6 años
+        calificacion = aleatorio.nextInt(9) + 1;
         disponibilidad();
     }
 
@@ -22,8 +22,8 @@ public class Alumno extends Persona{
     }
 
     @Override
-    public void disponibilidad(){
-        int probabilidad=aleatorio.nextInt(100);
+    public void disponibilidad() {
+        int probabilidad = aleatorio.nextInt(100);
         super.setPresente(probabilidad > 50);
     }
 }

@@ -22,6 +22,6 @@ public interface Constantes {
             new Jugador("Ernesto")
     };
 
-    public final Random aleatorio=new Random();
+    public final Random aleatorio = new Random();
 }
 
