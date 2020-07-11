@@ -1,7 +1,5 @@
 package com.curso;
 
-import jdk.swing.interop.SwingInterOpUtils;
-
 import java.util.Random;
 
 public class Clase {
